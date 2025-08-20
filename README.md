@@ -2,6 +2,8 @@
 
 A powerful Raycast extension to quickly count lines, words, characters, and tokens from your clipboard content.
 
+![Demo](demo.png)
+
 ## Features
 
 - **Lines Count**: Count the number of lines in the text
