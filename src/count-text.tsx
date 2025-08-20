@@ -66,37 +66,21 @@ export default function CountText() {
     let tokensClaude = 0;
 
     try {
-      tokensGPT35 = encode(text, "gpt-3.5-turbo").length;
-    } catch (error) {
-      try {
-        tokensGPT35 = encode(text, "cl100k_base").length;
-      } catch (e) {
-        console.error("Failed to count GPT-3.5 tokens:", e);
-      }
+      tokensGPT35 = encode(text).length;
+    } catch (e) {
+      console.error("Failed to count GPT-3.5 tokens:", e);
     }
 
     try {
-      tokensGPT4 = encode(text, "gpt-4").length;
-    } catch (error) {
-      try {
-        tokensGPT4 = encode(text, "cl100k_base").length;
-      } catch (e) {
-        console.error("Failed to count GPT-4 tokens:", e);
-      }
+      tokensGPT4 = encode(text).length;
+    } catch (e) {
+      console.error("Failed to count GPT-4 tokens:", e);
     }
 
     try {
-      tokensClaude = encode(text, "claude-3-5-sonnet-20241022").length;
-    } catch (error) {
-      try {
-        tokensClaude = encode(text, "claude").length;
-      } catch (e) {
-        try {
-          tokensClaude = encode(text, "cl100k_base").length;
-        } catch (e2) {
-          console.error("Failed to count Claude tokens:", e2);
-        }
-      }
+      tokensClaude = encode(text).length;
+    } catch (e) {
+      console.error("Failed to count Claude tokens:", e);
     }
 
     return {
@@ -278,7 +262,7 @@ export default function CountText() {
         <List.Item
           title="Claude Tokens"
           subtitle={formatNumber(counts.tokensClaude)}
-          icon={Icon.Sparkles}
+          icon={Icon.Star}
           accessories={[{ text: `${formatNumber(counts.tokensClaude)} tokens` }]}
           actions={
             <ActionPanel>
