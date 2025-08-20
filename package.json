@@ -1,0 +1,64 @@
+{
+  "name": "counter-raycast",
+  "version": "1.0.0",
+  "description": "Count tokens, words, lines, and characters from clipboard text in Raycast.",
+  "license": "MIT",
+  "author": "MatrixA",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MatrixA/counter-raycast"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "dev": "npx ray develop",
+    "build": "npx ray build",
+    "lint": "npx ray lint",
+    "publish": "npx @raycast/api@latest publish"
+  },
+  "dependencies": {
+    "@raycast/api": "^1.102.5",
+    "gpt-tokenizer": "^2.6.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
+    "eslint": "^8.57.0",
+    "prettier": "^3.3.3",
+    "typescript": "^5.5.4"
+  },
+  "raycast": {
+    "schemaVersion": 1,
+    "title": "Text Counter",
+    "icon": "icon.png",
+    "author": "MatrixA",
+    "categories": [
+      "Productivity",
+      "Developer Tools"
+    ],
+    "keywords": [
+      "token",
+      "word count",
+      "text",
+      "lines",
+      "characters",
+      "clipboard"
+    ],
+    "permissions": [
+      "clipboard"
+    ],
+    "commands": [
+      {
+        "name": "count-text",
+        "title": "Count Tokens / Words / Lines",
+        "description": "Count tokens, words, lines, and characters from clipboard input.",
+        "mode": "view",
+        "icon": "icon.png"
+      }
+    ]
+  }
+}
+
