@@ -1,11 +1,12 @@
 {
   "$schema": "https://www.raycast.com/schemas/extension.json",
-  "name": "counter-raycast",
+  "name": "text-counter",
   "title": "Text Counter",
   "description": "Count tokens, words, lines, and characters from clipboard text",
   "icon": "icon.png",
-  "author": "MatrixA",
+  "author": "fernando_jacob",
   "categories": ["Productivity", "Developer Tools"],
+  "keywords": ["counter", "tokens", "words", "characters", "lines", "clipboard", "gpt"],
   "license": "MIT",
   "commands": [
     {
